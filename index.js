@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import usuarioRoutes from './routes/UsuarioRoutes.js';
 import proyectoRoutes from './routes/ProyectoRoutes.js';
-import tareaRoutes from './routes/tareaRoutes.js';
+import tareaRoutes from './routes/TareaRoutes.js';
 
 
 

@@ -11,16 +11,16 @@ import {
 } from '../controllers/proyectoController.js'
 import checkAuth from '../middleware/checkAuth.js'
 
-const router=express.Router();
+const ProyectoRoutes=express.Router();
 
 
-router.route("/").get(checkAuth,obtenerProyectos).post(checkAuth,nuevoProyecto);
+ProyectoRoutes.route("/").get(checkAuth,obtenerProyectos).post(checkAuth,nuevoProyecto);
 
-router.route("/:id").get(checkAuth,obtenerProyecto).put(checkAuth,editarProyecto).delete(checkAuth,eliminarProyecto);
+ProyectoRoutes.route("/:id").get(checkAuth,obtenerProyecto).put(checkAuth,editarProyecto).delete(checkAuth,eliminarProyecto);
 
-router.post('/colaboradores',checkAuth,buscarColaborador)
-router.post("/colaboradores/:id",checkAuth,agregarColaborador);
-router.post("/eliminar-colaboradores/:id",checkAuth,eliminarColaborador);
+ProyectoRoutes.post('/colaboradores',checkAuth,buscarColaborador)
+ProyectoRoutes.post("/colaboradores/:id",checkAuth,agregarColaborador);
+ProyectoRoutes.post("/eliminar-colaboradores/:id",checkAuth,eliminarColaborador);
 
 
-export default router;
+export default ProyectoRoutes;

@@ -6,12 +6,13 @@ import {
     eliminarTarea,
     cambiarEstado    
 } from '../controllers/tareaController.js';
+
 import checkAuth from '../middleware/checkAuth.js';
 
-const TareaRoutes=express.Router();
+const tareaRoutes=express.Router();
 
-TareaRoutes.post('/',checkAuth,agregarTarea);
-TareaRoutes.route('/:id').get(checkAuth,obtenerTarea).put(checkAuth,actualizarTarea).delete(checkAuth,eliminarTarea);
-TareaRoutes.post('/estado/:id',checkAuth,cambiarEstado);
+tareaRoutes.post('/',checkAuth,agregarTarea);
+tareaRoutes.route('/:id').get(checkAuth,obtenerTarea).put(checkAuth,actualizarTarea).delete(checkAuth,eliminarTarea);
+tareaRoutes.post('/estado/:id',checkAuth,cambiarEstado);
 
-export default TareaRoutes;
+export default tareaRoutes;

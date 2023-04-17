@@ -3,16 +3,16 @@ import conectarDB from './config/db.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import ProyectoRoutes from './routes/ProyectoRoutes.js';
-// import UsuarioRoutes from './routes/UsuarioRoutes.js';
-import TareaRoutes from './routes/TareaRoutes.js';
+import tareaRoutes from './routes/tareaRoutes.js';
+import usuarioRoutes from './routes/usuarioRoutes.js';
 
 
 
 const app=express();
 
-app.use(express.json())
+app.use(express.json());
 
-dotenv.config()
+dotenv.config();
 conectarDB();
 
 //Configurar CORS
@@ -34,9 +34,9 @@ const corsOptions={
 app.use(cors(corsOptions));
 
 //Routing
-// app.use('/api/usuarios',UsuarioRoutes)
-app.use('/api/proyectos',ProyectoRoutes)
-app.use('/api/tareas',TareaRoutes)
+app.use('/api/usuarios',usuarioRoutes);
+app.use('/api/proyectos',ProyectoRoutes);
+app.use('/api/tareas',tareaRoutes);
 
 const PORT=process.env.PORT || 4000;
 

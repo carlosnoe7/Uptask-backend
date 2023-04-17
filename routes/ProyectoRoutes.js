@@ -8,8 +8,8 @@ import {
     agregarColaborador,
     eliminarColaborador,
     buscarColaborador
-} from '../controllers/proyectoController.js'
-import checkAuth from '../middleware/checkAuth.js'
+} from '../controllers/proyectoController.js';
+import checkAuth from '../middleware/checkAuth.js';
 
 const ProyectoRoutes=express.Router();
 

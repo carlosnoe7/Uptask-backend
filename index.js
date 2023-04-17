@@ -2,8 +2,8 @@ import express from 'express';
 import conectarDB from './config/db.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import UsuarioRoutes from './routes/UsuarioRoutes.js';
 import ProyectoRoutes from './routes/ProyectoRoutes.js';
+import UsuarioRoutes from './routes/UsuarioRoutes.js';
 import TareaRoutes from './routes/TareaRoutes.js';
 
 
